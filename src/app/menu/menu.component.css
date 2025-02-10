@@ -1,0 +1,66 @@
+.menu {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .menu-icons {
+    display: flex;
+  }
+  
+  .menu-icons i {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: white;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .menu-options {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    width:80%
+  }
+  
+  .menu-options li {
+    margin: 0 10px;
+    cursor: pointer;
+    text-align: center;
+    flex: 2;
+  }
+  
+  .content {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: auto
+  }
+  
+  .content h1 {
+    font-weight: bold
+  }
+
+  .content h2 {
+    font-weight: lighter;
+    font-size: small
+  }

@@ -1,0 +1,11 @@
+<div class="galeria">
+    <div *ngIf="imagenSeleccionada" class="imagen-principal">
+      <img [src]="imagenSeleccionada" alt="Imagen Seleccionada">
+    </div>
+  
+    <div class="imagenes-adicionales">
+      <div *ngFor="let foto of fotos">
+        <img [src]="foto" (click)="mostrarImagen(foto)" alt="Foto de estancia">
+      </div>
+    </div>
+  </div>

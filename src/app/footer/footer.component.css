@@ -1,0 +1,22 @@
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: large;
+  }
+
+  button {
+    border-radius: 40px;
+    padding: auto;
+    float:right  }
+
+
+  h2 {
+    font-size: x-small;
+  }
+
+  

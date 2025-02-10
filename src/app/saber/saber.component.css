@@ -1,0 +1,39 @@
+.Titulo {
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex: 3;
+    margin: 0 0px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Fondo gris */
+  }
+  
+  .column h2 {
+    margin-top: 0;
+    font-weight: bold; /* Títulos en negritas */
+  }
+  
+  .column p {
+    font-weight:lighter;
+    font-size: x-small;
+    
+  }
+  
+  .column a {
+    display: block;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    text-decoration: none;
+  }
+  
+  .column a:hover {
+    text-decoration: underline;
+  }

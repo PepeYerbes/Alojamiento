@@ -1,0 +1,15 @@
+<form (ngSubmit)="calcularCosto()">
+    <label for="huespedes">Huéspedes:</label>
+    <input type="number" id="huespedes" [(ngModel)]="huespedes" name="huespedes" required>
+   
+    <label for="noches">Noches:</label>
+    <input type="number" id="noches" [(ngModel)]="noches" name="noches" required>
+   
+    <div *ngFor="let extra of extras">
+      <input type="checkbox" [id]="extra.nombre" [(ngModel)]="extra.seleccionado" name="extras">
+      <label [for]="extra.nombre">{{ extra.nombre }}</label>
+    </div>
+   
+    <button type="submit">Calcular Costo</button>
+  </form>
+  <p>Costo Total: {{ costoTotal | currency }}</p>
