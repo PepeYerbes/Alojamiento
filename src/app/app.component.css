@@ -1,7 +1,63 @@
-
-.contenedor-principal {
-    width: 100%; /* Ocupa todo el ancho de la página */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Asegura que ambos componentes tengan el mismo alto */
+    background-color: white; /* Fondo blanco */
+    margin-bottom: 0px;
+  }
+  
+  .left {
+    flex: 1; /* Puedes ajustar este valor según tus necesidades */
+  }
+  
+  .right {
+    flex: 1; /* Puedes ajustar este valor según tus necesidades */
+  }
+    
+  .galeria {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los componentes */
+    align-items: center;
+    width: 90%;
+  }
+  
+  .imagen-principal img {
+    width: 60%; /* Tamaño de la foto principal al 60% */
+    margin-top: 10px;
+    aspect-ratio: 4/8;
+    object-fit: contain;
+  }
+  
+  .imagenes-adicionales {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 60%; /* Ajusta el ancho del contenedor de imágenes adicionales */
+  }
+  
+  .imagenes-adicionales img {
+    width: 20%; /* Tamaño de las fotos adicionales al 20% */
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  .imagenes-adicionales img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+  
+  .formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .formulario label, .formulario input, .formulario button, .formulario p {
+    font-size: 1.2em; /* Ampliar el texto del formulario */
+    line-height: 1.5em; /* Interlineado de 3px */
   }

@@ -1,41 +1,40 @@
 .galeria {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido */
-    width: 100%; /* Ocupa todo el ancho de la página */
+    align-items: center;
+  }
+  
+  .imagen-principal {
+    width: 80%;
+    aspect-ratio: 1; /* Mantiene una relación de aspecto 1:1 */
+    margin-bottom: 20px; /* Espacio entre la imagen principal y las adicionales */
   }
   
   .imagen-principal img {
-    width: 40%; /* Ocupa el 40% de la página */
-    margin-top: 20px;
-    aspect-ratio: 4/3;
-    object-fit: contain
+    width: 100%;
+    height: 90%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
   }
   
   .imagenes-adicionales {
     display: flex;
-    justify-content: center; /* Centra las imágenes adicionales */
-    margin-top: 20px;
-    aspect-ratio: 4/3;
-    object-fit: contain;
-    width: 40%
-}
+    justify-content: center;
+    gap: 10px; /* Espacio entre las imágenes adicionales */
+  }
+  
+  .imagenes-adicionales div {
+    width: 20%;
+    aspect-ratio: 1; /* Mantiene una relación de aspecto 1:1 */
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  
+  .imagenes-adicionales div:hover {
+    opacity: 1;
+  }
   
   .imagenes-adicionales img {
-    width: 30%; /* Ajusta el tamaño de las imágenes adicionales */
-    height: auto; /* Mantiene la proporción */
-    margin: 10px;
-    cursor: pointer;
-    filter: grayscale(100%); /* Degradado en tono */
-    transition: filter 0.3s ease, transform 0.3s ease; /* Añade transición para el tamaño */
-  }
-  
-  .imagenes-adicionales img:hover {
-    filter: grayscale(0%); /* Ilumina al pasar el mouse */
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
-  }
-  
-  .imagen-grande img {
-    width: 40%; /* Ocupa el 40% de la página */
-    margin-top: 20px;
+    width: 90%;
+    height: 90%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
   }

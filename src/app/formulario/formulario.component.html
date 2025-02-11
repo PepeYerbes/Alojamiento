@@ -1,15 +1,32 @@
-<form (ngSubmit)="calcularCosto()">
-    <label for="huespedes">Huéspedes:</label>
-    <input type="number" id="huespedes" [(ngModel)]="huespedes" name="huespedes" required>
-   
-    <label for="noches">Noches:</label>
-    <input type="number" id="noches" [(ngModel)]="noches" name="noches" required>
-   
-    <div *ngFor="let extra of extras">
-      <input type="checkbox" [id]="extra.nombre" [(ngModel)]="extra.seleccionado" name="extras">
-      <label [for]="extra.nombre">{{ extra.nombre }}</label>
+<form>
+    <div class="section">
+      <label for="huespedes">Huéspedes:</label>
+      <div class="input-group">
+        <button type="button" (click)="decrementar('huespedes')">-</button>
+        <input type="number" id="huespedes" [(ngModel)]="huespedes" name="huespedes" (ngModelChange)="calcularCosto()" required readonly>
+        <button type="button" (click)="incrementar('huespedes')">+</button>
+      </div>
+      
+      <label for="noches">Noches:</label>
+      <div class="input-group">
+        <button type="button" (click)="decrementar('noches')">-</button>
+        <input type="number" id="noches" [(ngModel)]="noches" name="noches" (ngModelChange)="calcularCosto()" required readonly>
+        <button type="button" (click)="incrementar('noches')">+</button>
+      </div>
     </div>
-   
-    <button type="submit">Calcular Costo</button>
+    
+    <div class="section">
+      <h3>Extras</h3>
+      <div class="checkboxes">
+        <div *ngFor="let extra of extras">
+          <input type="checkbox" [id]="extra.nombre" [(ngModel)]="extra.seleccionado" name="extras" (ngModelChange)="calcularCosto()">
+          <label [for]="extra.nombre">{{ extra.nombre }}</label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <p>Costo Total: {{ costoTotal | currency }}</p>
+      <button type="button" (click)="reservar()">Reservar</button>
+    </div>
   </form>
-  <p>Costo Total: {{ costoTotal | currency }}</p>

@@ -1,17 +1,37 @@
-.Titulo {
+body {
+    background-color:grey; 
+  }
+  
+  .Titulo {
     text-align: center;
+    margin-bottom: 0px;
+    background-color: white;
+    padding: 40px; /* Ajusta el padding según tus necesidades */
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center; /* Centra el contenedor principal */
+    background-color: white; /* Fondo blanco para el contenedor principal */
+    padding: 20px;
   }
   
   .container {
     display: flex;
     justify-content: space-between;
-  }
+    width: 80%; /* Ajusta el ancho del contenedor principal */
+    max-width: 900px; /* Ancho máximo para evitar que se expanda demasiado */
+    flex-wrap: wrap; /* Permite que los contenedores se ajusten en varias líneas si es necesario */
+    padding: 0 0 50px;
+}
   
   .column {
-    flex: 3;
-    margin: 0 0px;
+    flex: 1 1 30%; /* Asegura que cada columna ocupe el mismo espacio */
+    margin: 10px;
     padding: 20px;
     background-color: #f0f0f0; /* Fondo gris */
+    border-radius: 15px; /* Añade bordes redondeados */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
   }
   
   .column h2 {
@@ -20,14 +40,13 @@
   }
   
   .column p {
-    font-weight:lighter;
+    color: black;
     font-size: x-small;
-    
   }
   
   .column a {
     display: block;
-    margin-top: 10px;
+    margin-top: 30px;
     color: black;
     font-weight: bold;
     font-size: small;

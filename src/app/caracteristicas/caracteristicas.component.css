@@ -1,6 +1,9 @@
 .caracteristica {
     display: flex;
     justify-content: space-between;
+    background-color: white; /* Fondo blanco */
+    padding: 20px; /* Espacio interno */
+    margin-bottom: 0; /* Espacio externo para separar de otros componentes */
   }
   
   .column {
@@ -16,4 +19,8 @@
   
   .column p {
     font-weight: normal; 
+  }
+  
+  .column p i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
   }

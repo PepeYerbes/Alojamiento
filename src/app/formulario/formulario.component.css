@@ -1,7 +1,89 @@
-.formulario {
-    width: 100%; /* Ocupa todo el ancho de la página */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido */
+form {
+    width: 80%;
+    background-color: #f2f2f2; /* Gris muy claro */
     padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    line-height: 2; 
+  }
+  
+  .section {
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  label[for="huespedes"], label[for="noches"] {
+    color: orange;
+    display: block; /* Asegura que cada etiqueta esté en una nueva línea */
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
+  }
+  
+  .input-group {
+    display: flex; /* Asegura que los botones y el input estén en la misma línea */
+    align-items: center;
+    margin-bottom: 20px; /* Espacio entre los grupos de input */
+  }
+  
+  .input-group input[type="number"] {
+    margin: 0 10px; /* Espacio entre el input y los botones */
+  }
+  
+  .section {
+    margin-bottom: 30px; /* Espacio entre las secciones */
+  }
+  
+  input[type="number"] {
+    width: 30px; /* Ajustar el tamaño del input */
+    text-align: center;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    background: none;
+  }
+  
+  button[type="button"] {
+    background-color: grey;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 20%, auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="button"]:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .checkboxes {
+    display: block; /* Asegura que cada casilla de verificación esté en una nueva línea */
+  }
+  
+  .checkboxes > div {
+    margin-bottom: 10px; /* Espacio entre cada casilla de verificación */
+  }
+  
+  p {
+    font-size: 1.5em; /* Más grande que las opciones de arriba */
+    font-weight: bold; /* Negritas */
+  }
+  
+  button[type="submit"] {
+    background-color: grey;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* Centra el botón */
+    font-size: 1.05em; /* Aumenta el tamaño del botón en un 5% */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: black;
+    color: white;
   }
